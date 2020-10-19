@@ -20,8 +20,6 @@
         {
             //memberikan data title pada pelanggan
             $data['title'] = "Detail Pelanggan";
-            //memberikan data nama toko
-            $data['nama'] = "Rohman";
             //mengambil data dari pelanggan model, dengan method pelangganByID
             $data['pelanggan'] = $this->model('pelanggan_model')->pelangganById($id);
             //mengambil tampilan

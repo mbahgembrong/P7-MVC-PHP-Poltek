@@ -21,8 +21,6 @@
         {
             //memberikan data title pada pegawai
             $data['title'] = "Detail Pegawai";
-            //mengambil data nama toko
-
             //mengambil data dari pegawai model, dengan method pegawaiByID
             $data['pegawai'] = $this->model('pegawai_model')->pegawaiById($id);
             //mengambil tampilan
