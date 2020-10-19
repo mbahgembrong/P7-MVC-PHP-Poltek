@@ -5,7 +5,11 @@
         protected $method = 'index';//default method index
         protected $params = [];
         public function __construct(){
-            $url = $this->parseURL();
+            $url=$this->parseURL();
+            // var_dump($url);
+            if ($url==null) {
+                $url[0]='';
+            }
             //var_dump($url);
             //controller
             if(file_exists('../app/controllers/' . $url[0] . '.php')){//ada tidak nama setelah public.php pada folder controllers

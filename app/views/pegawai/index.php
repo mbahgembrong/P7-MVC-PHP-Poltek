@@ -1,6 +1,6 @@
 <!-- awal content -->
 <div class='card'>
-    <h5 class='card-header'>Data Pegawai Toko <?= $data['nama']; ?></h5>
+    <h5 class='card-header'>Data Pegawai Toko <?= BASENAME; ?></h5>
     <div class='card-body'>
     <?php
         Flasher::flash();
@@ -9,7 +9,7 @@
         <table class='table'>
             <thead>
                 <tr>
-                    <th scope='col'>#</th>
+                    <th scope='col'>No.</th>
                     <th scope='col'>Nama</th>
                     <th scope='col'>Telepon</th>
                     <th scope='col'>Jabatan</th>
@@ -19,7 +19,8 @@
             <tbody>
                 <?php
                 $i = 1;
-                foreach ($data['pegawai'] as $data) :
+                if (isset($data['pegawai'])) {
+                    foreach ($data['pegawai'] as $data) :
                 ?>
                     <tr>
                         <th scope='row'><?= $i++; ?></th>
@@ -27,17 +28,19 @@
                         <td><?= $data['telepon']; ?></td>
                         <td><?= $data['jabatan']; ?></td>
                         <td>
-                            <a class="btn btn-primary btn-sm" 
+                            <a class="btn btn-primary btn-sm"
                             href="<?= BASEURL; ?>/pegawai/detail/<?= $data['id_pegawai']; ?>" role='button'>
                                 Detail<!-- penambahan button -->
                             </a>
-                            <a class="btn btn-danger btn-sm" 
+                            <a class="btn btn-danger btn-sm"
                             href="<?= BASEURL; ?>/pegawai/delete/<?= $data['id_pegawai']; ?>" role="button">
                                 Hapus
                             </a>
                         </td>
                     </tr>
-                <?php endforeach; ?>
+                <?php endforeach;
+                }
+                ?>
             </tbody>
         </table>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -67,7 +70,7 @@
                         <label for="formGroupExampleInput">Nama</label>
                         <input type="text" class="form-control" id="nama_pegawai" name="nama_pegawai" placeholder="Nama Pegawai">
                     </div>
-                    
+
                     <div class="form-row">
                         <label for="formGroupExampleInput">Telepon</label>
                         <input type="text" class="form-control" id="nama_pegawai" name="telepon" placeholder="Telepon">

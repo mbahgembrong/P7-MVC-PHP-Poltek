@@ -1,6 +1,6 @@
 <!-- awal content -->
 <div class='card'>
-    <h5 class='card-header'>Data Pelanggan Toko <?= $data['nama']; ?></h5>
+    <h5 class='card-header'>Data Pelanggan Toko <?= BASENAME; ?></h5>
     <div class='card-body'>
     <?php
         Flasher::flash();
@@ -9,7 +9,7 @@
         <table class='table'>
             <thead>
                 <tr>
-                    <th scope='col'>#</th>
+                    <th scope='col'>No.</th>
                     <th scope='col'>Nama</th>
                     <th scope='col'>Alamat</th>
                     <th scope='col'>Telepon</th>
@@ -19,7 +19,8 @@
             <tbody>
                 <?php
                 $i = 1;
-                foreach ($data['pelanggan'] as $data) :
+                if (isset($data['pelanggan'])) {
+                    foreach ($data['pelanggan'] as $data) :
                 ?>
                     <tr>
                         <th scope='row'><?= $i++; ?></th>
@@ -35,7 +36,8 @@
                             </a>
                         </td>
                     </tr>
-                <?php endforeach; ?>
+                <?php endforeach;
+                } ?>
             </tbody>
         </table>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">

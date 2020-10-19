@@ -1,6 +1,6 @@
 <!-- Awal Content -->
 <div class="card">
-    <h5 class="card-header">Detail Data Pelanggan Toko <?= $data['nama']; ?></h5>
+    <h5 class="card-header">Detail Data Pelanggan Toko <?= BASENAME; ?></h5>
     <div class="card-body">
         <form action="<?= BASEURL; ?>/pelanggan/update" method="POST">
         <?php

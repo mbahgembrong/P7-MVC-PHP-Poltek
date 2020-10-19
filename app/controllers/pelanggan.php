@@ -1,10 +1,12 @@
 <?php
-    class Pelanggan extends Controller{
-        public function index(){
+    class Pelanggan extends Controller
+    {
+        public function index()
+        {
             //memberikan data title pada header
             $data['title'] = "Pelanggan";
             //mengambil data nama toko
-            $data['nama'] = $this->model('pelanggan_model')->getNamaToko();
+            // $data['nama'] = $this->model('pelanggan_model')->getNamaToko();
             //mengambil data dari pelanggan model, dengan method db_pelanggan
             $data['pelanggan'] = $this->model('pelanggan_model')->db_pelanggan();
 
@@ -14,7 +16,8 @@
             $this->view('pelanggan/index', $data);
             $this->view('layouts/footer');
         }
-        public function detail($id){
+        public function detail($id)
+        {
             //memberikan data title pada pelanggan
             $data['title'] = "Detail Pelanggan";
             //memberikan data nama toko
@@ -27,7 +30,8 @@
             $this->view('pelanggan/detail', $data);
             $this->view('layouts/footer');
         }
-        public function input(){
+        public function input()
+        {
             $id_pelanggan = $_POST['id_pelanggan'];
             $nama = $_POST['nama'];
             $alamat = $_POST['alamat'];
@@ -39,15 +43,17 @@
 
             header('Location:'.BASEURL.'/pelanggan');
         }
-        public function delete($id_pelanggan){
+        public function delete($id_pelanggan)
+        {
             //mengirim data kedalam model
             $this->model('pelanggan_model')->hapuspelanggan($id_pelanggan);
 
             //redirect setelah berhasil delete data
             header('Location:'.BASEURL.'/pelanggan');
         }
-        
-        public function update(){
+
+        public function update()
+        {
             $id_pelanggan = $_POST['id_pelanggan'];
             $nama = $_POST['nama'];
             $alamat = $_POST['alamat'];
@@ -61,4 +67,3 @@
             header('Location:' .BASEURL.'/pelanggan');
         }
     }
-?>

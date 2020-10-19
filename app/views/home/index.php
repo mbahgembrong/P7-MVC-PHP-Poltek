@@ -1,8 +1,8 @@
 <!-- Awal Jumbotron -->
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4">Toko Rohman</h1>
-        <p class="lead">Sistem Operasi Untuk Penatatan Pegawai Dan Penjualan.</p>
+        <h1 class="display-4">Toko <?= BASENAME ?></h1>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
 </div>
 <!-- Akhir Jumbotron -->
@@ -11,20 +11,20 @@
 <div class="card-deck">
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Motor Baru</h5>
-            <p class="card-text">Pastikan anda mendapatkan informasi terbaru, tentang motor-motor kualitas terbaik.</p>
+            <h5 class="card-title">Lorem, ipsum.</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium placeat fuga assumenda tempore omnis amet exercitationem! Veritatis explicabo, voluptatibus quisquam at sunt, asperiores eveniet aperiam vero possimus ea neque?</p>
         </div>
     </div>
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Metode Pembayaran</h5>
-            <p class="card-text">Kami dapat menerima segala jenis pembayaran, baik transfer maupun tunai.</p>
+            <h5 class="card-title">Lorem, ipsum.</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium placeat fuga assumenda tempore omnis amet exercitationem! Veritatis explicabo, voluptatibus quisquam at sunt, asperiores eveniet aperiam vero possimus ea neque?</p>
         </div>
     </div>
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Garansi</h5>
-            <p class="card-text">Setiap pembelian ditoko kami jamin mendapatkan garansi.</p>
+            <h5 class="card-title">Lorem, ipsum.</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium placeat fuga assumenda tempore omnis amet exercitationem! Veritatis explicabo, voluptatibus quisquam at sunt, asperiores eveniet aperiam vero possimus ea neque?</p>
         </div>
     </div>
 </div><br>
