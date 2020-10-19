@@ -33,8 +33,7 @@
         //method untuk query tambah data
         public function tambahpegawai($id_pegawai, $nama_pegawai, $telepon, $kode_wilayah, $jabatan)
         {
-            $simpan = "INSERT INTO ".$this->table."
-                        VALUES ('$id_pegawai', '$nama_pegawai', '$telepon', '$kode_wilayah', '$jabatan','','','')";
+            $simpan = "INSERT INTO ".$this->table." VALUES ('$id_pegawai', '$nama_pegawai', '$telepon', '$kode_wilayah', '$jabatan','','','')";
             $result = $this->db->connect->query($simpan);
             if ($result == true) {
                 //Flasher jika berhasil
